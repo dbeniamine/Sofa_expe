@@ -1,0 +1,321 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading SofaMJEDFEM
+Computing 100 iterations.
+100 iterations done in 2.91172 s ( 34.344 FPS).
+100 iterations done in 2.91172 s ( 34.344 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group L3
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearTetFEM.scn
+
+=====================
+Region: BaseStrainMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.128200
+call count,3051.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,1143722000.000000
+CPU_CLK_UNHALTED_CORE,424183800.000000
+CPU_CLK_UNHALTED_REF,424088800.000000
+L2_LINES_IN_ALL,9274471.000000
+L2_LINES_OUT_DIRTY_ALL,2386585.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.128200
+Runtime unhalted [s],0.141736
+Clock [MHz],2993.454657
+CPI,0.370880
+L3 Load [MBytes/s],4630.004735
+L3 Evict [MBytes/s],1191.431819
+L3 bandwidth [MBytes/s],5821.436553
+L3 data volume [GBytes],0.746308
+
+
+=====================
+Region: BaseDeformationMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.353932
+call count,6312.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,2399406000.000000
+CPU_CLK_UNHALTED_CORE,1146965000.000000
+CPU_CLK_UNHALTED_REF,1146789000.000000
+L2_LINES_IN_ALL,53400100.000000
+L2_LINES_OUT_DIRTY_ALL,6038042.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.353932
+Runtime unhalted [s],0.383243
+Clock [MHz],2993.243553
+CPI,0.478020
+L3 Load [MBytes/s],9656.096572
+L3 Evict [MBytes/s],1091.831601
+L3 bandwidth [MBytes/s],10747.928173
+L3 data volume [GBytes],3.804041
+
+
+=====================
+Region: BaseStrainMapping applyJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.084041
+call count,3245.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,717166600.000000
+CPU_CLK_UNHALTED_CORE,295085700.000000
+CPU_CLK_UNHALTED_REF,294951800.000000
+L2_LINES_IN_ALL,9478880.000000
+L2_LINES_OUT_DIRTY_ALL,812149.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.084041
+Runtime unhalted [s],0.098599
+Clock [MHz],2994.142886
+CPI,0.411460
+L3 Load [MBytes/s],7218.514861
+L3 Evict [MBytes/s],618.481258
+L3 bandwidth [MBytes/s],7836.996119
+L3 data volume [GBytes],0.658626
+
+
+=====================
+Region: BaseStrainMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.005227
+call count,105.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,45425100.000000
+CPU_CLK_UNHALTED_CORE,17071630.000000
+CPU_CLK_UNHALTED_REF,17070600.000000
+L2_LINES_IN_ALL,306295.000000
+L2_LINES_OUT_DIRTY_ALL,20517.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.005227
+Runtime unhalted [s],0.005704
+Clock [MHz],2992.964822
+CPI,0.375819
+L3 Load [MBytes/s],3750.534277
+L3 Evict [MBytes/s],251.227450
+L3 bandwidth [MBytes/s],4001.761727
+L3 data volume [GBytes],0.020916
+
+
+=====================
+Region: BaseDeformationMapping applyJT seqMat 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000099
+call count,606.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,2556753.000000
+CPU_CLK_UNHALTED_CORE,7810235.000000
+CPU_CLK_UNHALTED_REF,7778190.000000
+L2_LINES_IN_ALL,17888.000000
+L2_LINES_OUT_DIRTY_ALL,2114.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000099
+Runtime unhalted [s],0.002610
+Clock [MHz],3005.114075
+CPI,3.054748
+L3 Load [MBytes/s],11599.379884
+L3 Evict [MBytes/s],1370.812225
+L3 bandwidth [MBytes/s],12970.192109
+L3 data volume [GBytes],0.001280
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000301
+call count,3245.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,13645420.000000
+CPU_CLK_UNHALTED_CORE,40721990.000000
+CPU_CLK_UNHALTED_REF,40512900.000000
+L2_LINES_IN_ALL,73708.000000
+L2_LINES_OUT_DIRTY_ALL,4937.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000301
+Runtime unhalted [s],0.013607
+Clock [MHz],3008.230219
+CPI,2.984297
+L3 Load [MBytes/s],15648.322486
+L3 Evict [MBytes/s],1048.132742
+L3 bandwidth [MBytes/s],16696.455228
+L3 data volume [GBytes],0.005033
+
+
+=====================
+Region: BaseDeformationMapping applyJ else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000280
+call count,2841.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,11969280.000000
+CPU_CLK_UNHALTED_CORE,36097660.000000
+CPU_CLK_UNHALTED_REF,36043140.000000
+L2_LINES_IN_ALL,86072.000000
+L2_LINES_OUT_DIRTY_ALL,6315.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000280
+Runtime unhalted [s],0.012062
+Clock [MHz],2997.311225
+CPI,3.015859
+L3 Load [MBytes/s],19653.644532
+L3 Evict [MBytes/s],1441.964463
+L3 bandwidth [MBytes/s],21095.608994
+L3 data volume [GBytes],0.005913
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.257165
+call count,6490.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,1121375000.000000
+CPU_CLK_UNHALTED_CORE,856866000.000000
+CPU_CLK_UNHALTED_REF,856538000.000000
+L2_LINES_IN_ALL,42534620.000000
+L2_LINES_OUT_DIRTY_ALL,2739452.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.257165
+Runtime unhalted [s],0.286311
+Clock [MHz],2993.930291
+CPI,0.764121
+L3 Load [MBytes/s],10585.482783
+L3 Evict [MBytes/s],681.760457
+L3 bandwidth [MBytes/s],11267.243241
+L3 data volume [GBytes],2.897541
+
+
+=====================
+Region: BaseStrainMapping applyDJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.054346
+call count,1518.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,501006900.000000
+CPU_CLK_UNHALTED_CORE,183481500.000000
+CPU_CLK_UNHALTED_REF,183429500.000000
+L2_LINES_IN_ALL,5102704.000000
+L2_LINES_OUT_DIRTY_ALL,1045472.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.054346
+Runtime unhalted [s],0.061308
+Clock [MHz],2993.632661
+CPI,0.366225
+L3 Load [MBytes/s],6009.116283
+L3 Evict [MBytes/s],1231.183078
+L3 bandwidth [MBytes/s],7240.299362
+L3 data volume [GBytes],0.393483
+
+
+=====================
+Region: BaseDeformationMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.057468
+call count,1040.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,329369000.000000
+CPU_CLK_UNHALTED_CORE,186126900.000000
+CPU_CLK_UNHALTED_REF,186108200.000000
+L2_LINES_IN_ALL,8367275.000000
+L2_LINES_OUT_DIRTY_ALL,628479.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.057468
+Runtime unhalted [s],0.062192
+Clock [MHz],2993.084957
+CPI,0.565101
+L3 Load [MBytes/s],9318.354286
+L3 Evict [MBytes/s],699.916040
+L3 bandwidth [MBytes/s],10018.270326
+L3 data volume [GBytes],0.575728
+
+
+=====================
+Region: Simu 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],2.911754
+call count,1.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,8979657000.000000
+CPU_CLK_UNHALTED_CORE,5573719000.000000
+CPU_CLK_UNHALTED_REF,5573869000.000000
+L2_LINES_IN_ALL,183475800.000000
+L2_LINES_OUT_DIRTY_ALL,20614560.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],2.911754
+Runtime unhalted [s],1.862386
+Clock [MHz],2992.703704
+CPI,0.620705
+L3 Load [MBytes/s],4032.775846
+L3 Evict [MBytes/s],453.105530
+L3 bandwidth [MBytes/s],4485.881376
+L3 data volume [GBytes],13.061783
+

@@ -1,0 +1,73 @@
+<?xml version="1.0"?>
+<Node 	name="Root" gravity="0 -10 0" dt="0.1"  >
+
+  <RequiredPlugin pluginName="Flexible"/>
+  <RequiredPlugin pluginName="image"/>
+
+    <VisualStyle displayFlags="showVisual showBehavior" />
+
+
+    <DefaultAnimationLoop />
+    <DefaultVisualManagerLoop />
+
+  <MeshObjLoader name="mesh" filename="mesh/Armadillo_simplified.obj" triangulate="1"/>
+  <MeshToImageEngine  name="rasterizer" src="@mesh" voxelSize="0.6" padSize="1" rotateImage="true" />
+  <ImageContainer template="ImageB" name="image" src="@rasterizer" drawBB="false"/>
+  <!-- <ImageViewer template="ImageB" name="viewer" src="@image"  /> -->
+  <ImageSampler template="ImageB" name="sampler" src="@image" param="1" showEdges="false" printLog="true"/>
+
+  <EulerImplicit rayleighMass="0" rayleighStiffness="0" />
+  <CGLinearSolver tolerance="1.0e-9" threshold="1.0e-9" iterations="100" />
+  <Mesh  src="@sampler" />
+  <MechanicalObject  name="dofs" />
+
+  <BarycentricShapeFunction nbRef="8" />
+
+    <Node 	name="behavior"   >
+	<TopologyGaussPointSampler name="sampler" inPosition="@../dofs.rest_position" method="0" order="2"/>
+	<MechanicalObject  template="F331" name="F"  showObject="0" showObjectScale="0.05" />
+    	<LinearMapping template="Mapping&lt;Vec3d,F331&gt;" assemble="1" />
+
+	    <Node 	name="Strain"   >
+		<MechanicalObject  template="E331" name="E"  />
+<!-- 	    	<GreenStrainMapping template="Mapping&lt;F331,E331&gt;"  /> -->
+	    	<CorotationalStrainMapping template="Mapping&lt;F331,E331&gt;" method="svd" />
+	        <HookeForceField  template="E331" name="ff" youngModulus="3000" poissonRatio="0.3" viscosity="0" />
+	     </Node>
+    </Node>
+
+<!--     <MeshMatrixMass massDensity="0.001" lumping="false"/> -->
+      <UniformMass totalMass="100"/>
+
+    
+    <BoxROI template="Vec3d" box="1.5 0 0 5 2 5" position="@dofs.rest_position" name="FixedROI" drawBoxes="1"/>
+    <FixedConstraint indices="@FixedROI.indices" />
+    
+    <ConstantForceField points="10 3000" forces="-500 0 -100   0 300 0 " />
+
+
+  <Node name="Visual"  >
+        <VisualModel  fileMesh="mesh/Armadillo_simplified.obj"   />
+        <LinearMapping template="MechanicalMapping&lt;Vec3d,Vec3d&gt;" assemble="1" />
+   </Node>
+
+  
+
+ 	<Node name="VisuHexa"  >
+		<VisualModel color="0.8 0.8 1 0.1" />
+		<IdentityMapping />
+	</Node>
+
+ 	<Node name="VisuHexa2"  >
+		<VisualStyle displayFlags="showWireframe"/>
+		<VisualModel color="0.8 0.8 1 1" />
+		<IdentityMapping />
+	</Node>
+<!--
+	  <HexahedronFEMForceField youngModulus="3000.0" poissonRatio="0.3" method="large" updateStiffnessMatrix="false" />
+	  <Node name="Visual"  >
+	     <VisualModel  fileMesh="mesh/Armadillo_simplified.obj"   />
+	     <BarycentricMapping input="@.." output="@." />
+	  </Node>
+-->
+</Node>

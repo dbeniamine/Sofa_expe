@@ -1,0 +1,49 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 0.423905 s ( 235.902 FPS).
+100 iterations done in 0.423908 s ( 235.9 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group MEM
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+Event,core 0
+INSTR_RETIRED_ANY,11338145079.000000
+CPU_CLK_UNHALTED_CORE,7317266865.000000
+CPU_CLK_UNHALTED_REF,7317395280.000000
+CAS_COUNT_RD,3878165.000000
+CAS_COUNT_WR,1862884.000000
+CAS_COUNT_RD,3875322.000000
+CAS_COUNT_WR,1861508.000000
+CAS_COUNT_RD,3877116.000000
+CAS_COUNT_WR,1863940.000000
+CAS_COUNT_RD,3875489.000000
+CAS_COUNT_WR,1862855.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],4.014884
+Runtime unhalted [s],2.444967
+Clock [MHz],2992.735239
+CPI,0.645367
+Memory Read BW [MBytes/s],247.177717
+Memory Write BW [MBytes/s],118.777019
+Memory BW [MBytes/s],365.954736
+Memory data volume [GBytes],1.469266
+

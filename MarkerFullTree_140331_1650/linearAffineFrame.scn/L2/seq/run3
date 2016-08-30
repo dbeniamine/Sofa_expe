@@ -1,0 +1,43 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 0.427182 s ( 234.092 FPS).
+100 iterations done in 0.427186 s ( 234.09 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group L2
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+Event,core 0
+INSTR_RETIRED_ANY,11328895279.000000
+CPU_CLK_UNHALTED_CORE,7315768529.000000
+CPU_CLK_UNHALTED_REF,7315775580.000000
+L1D_REPLACEMENT,172075247.000000
+L1D_M_EVICT,11326098.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],4.016598
+Runtime unhalted [s],2.444468
+Clock [MHz],2992.782899
+CPI,0.645762
+L2 Load [MBytes/s],2741.826793
+L2 Evict [MBytes/s],180.468716
+L2 bandwidth [MBytes/s],2922.295509
+L2 data volume [GBytes],11.737686
+

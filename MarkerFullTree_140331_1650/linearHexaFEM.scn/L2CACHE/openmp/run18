@@ -1,0 +1,58 @@
+likwid init thread 0
+likwid init thread 3
+likwid init thread 1
+likwid init thread 2
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/openmp/lib/libFlexible.so
+ImageSampler: 484 generated samples
+ImageSampler: 1191 generated edges
+ImageSampler: 257 generated hexahedra
+ImageSampler: 484 generated samples
+ImageSampler: 1191 generated edges
+ImageSampler: 257 generated hexahedra
+Computing 100 iterations.
+100 iterations done in 0.709144 s ( 141.015 FPS).
+100 iterations done in 0.709148 s ( 141.014 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group L2CACHE
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/openmp/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearHexaFEM.scn
+
+Event,core 0,core 1,core 2,core 3
+INSTR_RETIRED_ANY,7122162170.000000,9806626261.000000,2106996467.000000,2081527622.000000
+CPU_CLK_UNHALTED_CORE,4567174760.000000,4226972319.000000,965230121.000000,954989727.000000
+CPU_CLK_UNHALTED_REF,4567252500.000000,4227975840.000000,965227440.000000,954978420.000000
+L2_TRANS_ALL_REQUESTS,412133163.000000,173804230.000000,131668355.000000,126855272.000000
+L2_RQSTS_MISS,99664640.000000,50379503.000000,42031051.000000,40659132.000000
+
+
+Event,Sum,Max,Min,Avg
+INSTR_RETIRED_ANY STAT,21117312520.000000,9806626261.000000,2081527622.000000,5279328130.000000
+CPU_CLK_UNHALTED_CORE STAT,10714366927.000000,4567174760.000000,954989727.000000,2678591731.750000
+CPU_CLK_UNHALTED_REF STAT,10715434200.000000,4567252500.000000,954978420.000000,2678858550.000000
+L2_TRANS_ALL_REQUESTS STAT,844461020.000000,412133163.000000,126855272.000000,211115255.000000
+L2_RQSTS_MISS STAT,232734326.000000,99664640.000000,40659132.000000,58183581.500000
+
+
+Metric,core 0,core 1,core 2,core 3
+Runtime (RDTSC) [s],2.816335,2.816335,2.816335,2.816335
+Runtime unhalted [s],1.526059,1.412385,0.322518,0.319097
+Clock [MHz],2992.740215,2992.080809,2992.799469,2992.826591
+CPI,0.641262,0.431032,0.458107,0.458793
+L2 request rate,0.057866,0.017723,0.062491,0.060943
+L2 miss rate,0.013994,0.005137,0.019948,0.019533
+L2 miss ratio,0.241826,0.289864,0.319219,0.320516
+
+
+Metric,Sum,Max,Min,Avg
+Runtime (RDTSC) [s] STAT,11.265338,2.816335,2.816335,2.816335
+Runtime unhalted [s] STAT,3.580058,1.526059,0.319097,0.895015
+Clock [MHz] STAT,11970.447084,2992.826591,2992.080809,2992.611771
+CPI STAT,1.989195,0.641262,0.431032,0.497299
+L2 request rate STAT,0.199024,0.062491,0.017723,0.049756
+L2 miss rate STAT,0.058613,0.019948,0.005137,0.014653
+L2 miss ratio STAT,1.171425,0.320516,0.241826,0.292856
+

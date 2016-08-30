@@ -1,0 +1,299 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 1.42399 s ( 70.2252 FPS).
+100 iterations done in 1.42399 s ( 70.2251 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group DATA
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+=====================
+Region: BaseStrainMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.021413
+call count,2131.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,192229100.000000
+CPU_CLK_UNHALTED_CORE,90834810.000000
+CPU_CLK_UNHALTED_REF,90740970.000000
+MEM_UOP_RETIRED_LOADS,38466120.000000
+MEM_UOP_RETIRED_STORES,27078620.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.021413
+Runtime unhalted [s],0.030351
+Clock [MHz],2995.873876
+CPI,0.472534
+Load to Store ratio,1.420535
+
+
+=====================
+Region: BaseDeformationMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.093204
+call count,4369.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,682046900.000000
+CPU_CLK_UNHALTED_CORE,335180300.000000
+CPU_CLK_UNHALTED_REF,334995500.000000
+MEM_UOP_RETIRED_LOADS,186362500.000000
+MEM_UOP_RETIRED_STORES,105238500.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.093204
+Runtime unhalted [s],0.111996
+Clock [MHz],2994.429850
+CPI,0.491433
+Load to Store ratio,1.770859
+
+
+=====================
+Region: BaseStrainMapping applyJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.013608
+call count,2228.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,121673500.000000
+CPU_CLK_UNHALTED_CORE,68922450.000000
+CPU_CLK_UNHALTED_REF,68818140.000000
+MEM_UOP_RETIRED_LOADS,28621730.000000
+MEM_UOP_RETIRED_STORES,13604170.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.013608
+Runtime unhalted [s],0.023030
+Clock [MHz],2997.315143
+CPI,0.566454
+Load to Store ratio,2.103894
+
+
+=====================
+Region: BaseStrainMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.001268
+call count,105.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,10878640.000000
+CPU_CLK_UNHALTED_CORE,5096894.000000
+CPU_CLK_UNHALTED_REF,5092410.000000
+MEM_UOP_RETIRED_LOADS,2314143.000000
+MEM_UOP_RETIRED_STORES,1712235.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.001268
+Runtime unhalted [s],0.001703
+Clock [MHz],2995.414106
+CPI,0.468523
+Load to Store ratio,1.351534
+
+
+=====================
+Region: BaseDeformationMapping applyJT seqMat 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000052
+call count,303.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,1278381.000000
+CPU_CLK_UNHALTED_CORE,3907267.000000
+CPU_CLK_UNHALTED_REF,3894900.000000
+MEM_UOP_RETIRED_LOADS,337012.000000
+MEM_UOP_RETIRED_STORES,155439.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000052
+Runtime unhalted [s],0.001306
+Clock [MHz],3002.281491
+CPI,3.056418
+Load to Store ratio,2.168130
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000210
+call count,2228.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,9368860.000000
+CPU_CLK_UNHALTED_CORE,27953370.000000
+CPU_CLK_UNHALTED_REF,27809850.000000
+MEM_UOP_RETIRED_LOADS,2431777.000000
+MEM_UOP_RETIRED_STORES,1134052.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000210
+Runtime unhalted [s],0.009340
+Clock [MHz],3008.223904
+CPI,2.983647
+Load to Store ratio,2.144326
+
+
+=====================
+Region: BaseDeformationMapping applyJ else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000194
+call count,2026.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,8535687.000000
+CPU_CLK_UNHALTED_CORE,25535080.000000
+CPU_CLK_UNHALTED_REF,25371540.000000
+MEM_UOP_RETIRED_LOADS,2255779.000000
+MEM_UOP_RETIRED_STORES,1029208.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000194
+Runtime unhalted [s],0.008532
+Clock [MHz],3012.069755
+CPI,2.991567
+Load to Store ratio,2.191762
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.058403
+call count,4456.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,424104500.000000
+CPU_CLK_UNHALTED_CORE,230817200.000000
+CPU_CLK_UNHALTED_REF,230610800.000000
+MEM_UOP_RETIRED_LOADS,141153400.000000
+MEM_UOP_RETIRED_STORES,43953980.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.058403
+Runtime unhalted [s],0.077125
+Clock [MHz],2995.457466
+CPI,0.544246
+Load to Store ratio,3.211391
+
+
+=====================
+Region: BaseStrainMapping applyDJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.017951
+call count,2127.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,169751700.000000
+CPU_CLK_UNHALTED_CORE,80435790.000000
+CPU_CLK_UNHALTED_REF,80331630.000000
+MEM_UOP_RETIRED_LOADS,32863410.000000
+MEM_UOP_RETIRED_STORES,17245720.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.017951
+Runtime unhalted [s],0.026877
+Clock [MHz],2996.659398
+CPI,0.473844
+Load to Store ratio,1.905598
+
+
+=====================
+Region: BaseDeformationMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.015491
+call count,522.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,91192040.000000
+CPU_CLK_UNHALTED_CORE,53370450.000000
+CPU_CLK_UNHALTED_REF,53345850.000000
+MEM_UOP_RETIRED_LOADS,30061250.000000
+MEM_UOP_RETIRED_STORES,9752564.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.015491
+Runtime unhalted [s],0.017833
+Clock [MHz],2994.158981
+CPI,0.585253
+Load to Store ratio,3.082395
+
+
+=====================
+Region: Simu 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],1.424038
+call count,1.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,2734029000.000000
+CPU_CLK_UNHALTED_CORE,2087333000.000000
+CPU_CLK_UNHALTED_REF,2087344000.000000
+MEM_UOP_RETIRED_LOADS,748991800.000000
+MEM_UOP_RETIRED_STORES,422127700.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],1.424038
+Runtime unhalted [s],0.697456
+Clock [MHz],2992.763114
+CPI,0.763464
+Load to Store ratio,1.774325
+

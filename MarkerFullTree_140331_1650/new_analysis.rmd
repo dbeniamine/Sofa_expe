@@ -1,0 +1,54 @@
+
+```{r parsing ,echo=F}
+library(ggplot2)
+library(plyr)
+library(methods)
+data<-data.frame(read.csv2(file="results.csv",sep=',',dec='.'))
+data <- subset(data, data$Run <=30)
+data <- data[order(data$Function,data$Scene,data$Metric,data$Level,data$Run),]
+# Do stat
+stat<-ddply(data,c("Function", "Scene", "Metric", "Type", "Level"),summarise,
+            N=length(Value),mean=mean(Value),sd=sd(Value),se=sd/sqrt(N))
+stat <- stat[order(stat$Function, stat$Scene, stat$Metric, stat$Level, stat$Type),]
+# Normalize
+norm_vect <- rep(stat[stat$Type=="sequential",]$mean,each=2)
+stat$mean <-stat$mean / norm_vect
+stat$se <- stat$se / norm_vect
+
+# Clean
+stat$Metric <- gsub('[^ ]*$','',stat$Metric);
+stat$Type <- gsub('openmp', 'OpenMP', stat$Type)
+stat$Type <- gsub('sequential', 'Sequential', stat$Type)
+stat <- stat[stat$Function=="BaseStrainMapping applyDJT" &
+             stat$Scene=="linearQuadraticFrame"  |
+             stat$Function=="BaseDeformationMultiMapping applyDJT",];
+stat$Name <- paste(stat$Scene, stat$Function, sep="\n")
+show(stat)
+#show(norm_vect)
+```
+
+```{r ExecTime, echo=F}
+p <- ggplot(stat,aes(x=Level,y=mean, fill=Type))
+p <-  p + geom_bar(stat="identity", position=position_dodge(.9) )
+p <-  p + geom_errorbar(aes(ymin=mean-se,ymax=mean+se),width=.2,
+                        position=position_dodge(.9) )
+p <- p + xlab("Memory hierarchy level")
+p <- p + ylab("Normalized value relative to sequential execution")
+
+p <- p + scale_fill_brewer(name="Execution type", palette="YlOrRd")
+# BW theme
+p <- p + theme_bw()
+p <-  p + theme(panel.grid.minor = element_line(colour = "black", linetype="dashed", size = 0.1),
+        panel.grid.major = element_line(colour = "black", size = 0.1),
+        legend.position="bottom",plot.background=element_rect(fill="transparent",color=NA))
+p <- p + facet_grid(Scene ~ Metric)
+show(p);
+ggsave("SOFA_perfctr.pdf", device=cairo_pdf, scale=1)
+```
+
+```{r free, echo=F}
+remove(p)
+remove(stat)
+remove(data)
+remove(norm_vect)
+```

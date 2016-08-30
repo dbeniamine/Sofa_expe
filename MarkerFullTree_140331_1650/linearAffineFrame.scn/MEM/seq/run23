@@ -1,0 +1,49 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 0.425633 s ( 234.944 FPS).
+100 iterations done in 0.425637 s ( 234.942 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group MEM
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+Event,core 0
+INSTR_RETIRED_ANY,11335252921.000000
+CPU_CLK_UNHALTED_CORE,7281706428.000000
+CPU_CLK_UNHALTED_REF,7281942210.000000
+CAS_COUNT_RD,3888017.000000
+CAS_COUNT_WR,1865871.000000
+CAS_COUNT_RD,3884572.000000
+CAS_COUNT_WR,1864370.000000
+CAS_COUNT_RD,3885642.000000
+CAS_COUNT_WR,1867693.000000
+CAS_COUNT_RD,3882137.000000
+CAS_COUNT_WR,1865830.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],4.004458
+Runtime unhalted [s],2.433094
+Clock [MHz],2992.678982
+CPI,0.642395
+Memory Read BW [MBytes/s],248.369102
+Memory Write BW [MBytes/s],119.287289
+Memory BW [MBytes/s],367.656391
+Memory data volume [GBytes],1.472264
+

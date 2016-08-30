@@ -1,0 +1,78 @@
+likwid init thread 0
+likwid init thread 1
+likwid init thread 3
+likwid init thread 2
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/openmp/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/openmp/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/openmp/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 0.400588 s ( 249.633 FPS).
+100 iterations done in 0.400592 s ( 249.631 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group MEM
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/openmp/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+Event,core 0,core 1,core 2,core 3
+INSTR_RETIRED_ANY,5481269596.000000,8186049156.000000,495127474.000000,502969078.000000
+CPU_CLK_UNHALTED_CORE,4162717202.000000,3599246096.000000,363603407.000000,361729596.000000
+CPU_CLK_UNHALTED_REF,4162959570.000000,3599780490.000000,363630930.000000,361714830.000000
+CAS_COUNT_RD,2439293.000000,0.000000,0.000000,0.000000
+CAS_COUNT_WR,1447152.000000,0.000000,0.000000,0.000000
+CAS_COUNT_RD,2437377.000000,0.000000,0.000000,0.000000
+CAS_COUNT_WR,1446004.000000,0.000000,0.000000,0.000000
+CAS_COUNT_RD,2442744.000000,0.000000,0.000000,0.000000
+CAS_COUNT_WR,1447522.000000,0.000000,0.000000,0.000000
+CAS_COUNT_RD,2437392.000000,0.000000,0.000000,0.000000
+CAS_COUNT_WR,1447481.000000,0.000000,0.000000,0.000000
+
+
+Event,Sum,Max,Min,Avg
+INSTR_RETIRED_ANY STAT,14665415304.000000,8186049156.000000,495127474.000000,3666353826.000000
+CPU_CLK_UNHALTED_CORE STAT,8487296301.000000,4162717202.000000,361729596.000000,2121824075.250000
+CPU_CLK_UNHALTED_REF STAT,8488085820.000000,4162959570.000000,361714830.000000,2122021455.000000
+CAS_COUNT_RD STAT,2439293.000000,2439293.000000,0.000000,609823.250000
+CAS_COUNT_WR STAT,1447152.000000,1447152.000000,0.000000,361788.000000
+CAS_COUNT_RD STAT,2437377.000000,2437377.000000,0.000000,609344.250000
+CAS_COUNT_WR STAT,1446004.000000,1446004.000000,0.000000,361501.000000
+CAS_COUNT_RD STAT,2442744.000000,2442744.000000,0.000000,610686.000000
+CAS_COUNT_WR STAT,1447522.000000,1447522.000000,0.000000,361880.500000
+CAS_COUNT_RD STAT,2437392.000000,2437392.000000,0.000000,609348.000000
+CAS_COUNT_WR STAT,1447481.000000,1447481.000000,0.000000,361870.250000
+
+
+Metric,core 0,core 1,core 2,core 3
+Runtime (RDTSC) [s],2.709425,2.709425,2.709425,2.709425
+Runtime unhalted [s],1.390915,1.202639,0.121493,0.120867
+Clock [MHz],2992.616354,2992.346310,2992.564073,2992.912767
+CPI,0.759444,0.439680,0.734363,0.719189
+Memory Read BW [MBytes/s],230.467962,0.000000,0.000000,0.000000
+Memory Write BW [MBytes/s],136.723556,0.000000,0.000000,0.000000
+Memory BW [MBytes/s],367.191518,0.000000,0.000000,0.000000
+Memory data volume [GBytes],0.994878,0.000000,0.000000,0.000000
+
+
+Metric,Sum,Max,Min,Avg
+Runtime (RDTSC) [s] STAT,10.837699,2.709425,2.709425,2.709425
+Runtime unhalted [s] STAT,2.835914,1.390915,0.120867,0.708978
+Clock [MHz] STAT,11970.439504,2992.912767,2992.346310,2992.609876
+CPI STAT,2.652676,0.759444,0.439680,0.663169
+Memory Read BW [MBytes/s] STAT,230.467962,230.467962,0.000000,57.616991
+Memory Write BW [MBytes/s] STAT,136.723556,136.723556,0.000000,34.180889
+Memory BW [MBytes/s] STAT,367.191518,367.191518,0.000000,91.797879
+Memory data volume [GBytes] STAT,0.994878,0.994878,0.000000,0.248719
+

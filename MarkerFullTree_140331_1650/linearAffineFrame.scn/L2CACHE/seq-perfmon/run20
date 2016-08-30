@@ -1,0 +1,321 @@
+[requiredPlugin1(RequiredPlugin)]: Loading Flexible
+[requiredPlugin1(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libFlexible.so
+[requiredPlugin2(RequiredPlugin)]: Loading image
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libimage.so
+[requiredPlugin2(RequiredPlugin)]: Loaded /home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/lib/libimage_gui.so
+[requiredPlugin3(RequiredPlugin)]: Loading SofaMJEDFEM
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.transform (unknown) to Data transform(unknown) OK
+[sampler(ImageGaussPointSampler)]: Link from parent Data @../SF.weights (ImageD) to Data weights(ImageD) OK
+sampler: Number of rigid/soft regions : 5/195
+sampler: Completed in 8 Lloyd iterations
+sampler: total error = 88.8738
+sampler : 200 gauss points exported
+sampler: 200 generated samples
+sampler : 200 gauss points exported
+Computing 100 iterations.
+100 iterations done in 1.43738 s ( 69.5708 FPS).
+100 iterations done in 1.43739 s ( 69.5707 FPS).
+-------------------------------------------------------------
+-------------------------------------------------------------
+CPU type:	Intel Core SandyBridge EP processor 
+CPU clock:	2.99 GHz 
+Measuring group L2CACHE
+-------------------------------------------------------------
+/home/david/Work/Sofa/SVN/Sofa-build/seq-perfmon/bin/runSofa --gui batch --start --simu tree --nb_iterations 100 /home/david/Work/Sofa/expe/FlexibleLikwidPerfctr/scn/linearAffineFrame.scn
+
+=====================
+Region: BaseStrainMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.022601
+call count,2134.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,192499700.000000
+CPU_CLK_UNHALTED_CORE,95423400.000000
+CPU_CLK_UNHALTED_REF,95331420.000000
+L2_TRANS_ALL_REQUESTS,5848262.000000
+L2_RQSTS_MISS,1248658.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.022601
+Runtime unhalted [s],0.031884
+Clock [MHz],2995.676509
+CPI,0.495707
+L2 request rate,0.030381
+L2 miss rate,0.006487
+L2 miss ratio,0.213509
+
+
+=====================
+Region: BaseDeformationMapping applyJ 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.093108
+call count,4375.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,682979500.000000
+CPU_CLK_UNHALTED_CORE,336774000.000000
+CPU_CLK_UNHALTED_REF,336528200.000000
+L2_TRANS_ALL_REQUESTS,21521900.000000
+L2_RQSTS_MISS,6343070.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.093108
+Runtime unhalted [s],0.112528
+Clock [MHz],2994.974864
+CPI,0.493095
+L2 request rate,0.031512
+L2 miss rate,0.009287
+L2 miss ratio,0.294726
+
+
+=====================
+Region: BaseStrainMapping applyJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.013781
+call count,2231.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,121837300.000000
+CPU_CLK_UNHALTED_CORE,70352290.000000
+CPU_CLK_UNHALTED_REF,70241760.000000
+L2_TRANS_ALL_REQUESTS,5840960.000000
+L2_RQSTS_MISS,1284137.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.013781
+Runtime unhalted [s],0.023507
+Clock [MHz],2997.498282
+CPI,0.577428
+L2 request rate,0.047941
+L2 miss rate,0.010540
+L2 miss ratio,0.219850
+
+
+=====================
+Region: BaseStrainMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.001266
+call count,105.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,10878640.000000
+CPU_CLK_UNHALTED_CORE,5170024.000000
+CPU_CLK_UNHALTED_REF,5160030.000000
+L2_TRANS_ALL_REQUESTS,310385.000000
+L2_RQSTS_MISS,68532.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.001266
+Runtime unhalted [s],0.001727
+Clock [MHz],2998.585398
+CPI,0.475245
+L2 request rate,0.028532
+L2 miss rate,0.006300
+L2 miss ratio,0.220797
+
+
+=====================
+Region: BaseDeformationMapping applyJT seqMat 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000054
+call count,303.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,1278381.000000
+CPU_CLK_UNHALTED_CORE,4012511.000000
+CPU_CLK_UNHALTED_REF,3992310.000000
+L2_TRANS_ALL_REQUESTS,149236.000000
+L2_RQSTS_MISS,11492.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000054
+Runtime unhalted [s],0.001341
+Clock [MHz],3007.932379
+CPI,3.138744
+L2 request rate,0.116738
+L2 miss rate,0.008989
+L2 miss ratio,0.077006
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000259
+call count,2231.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,9381470.000000
+CPU_CLK_UNHALTED_CORE,29222440.000000
+CPU_CLK_UNHALTED_REF,29111670.000000
+L2_TRANS_ALL_REQUESTS,1088117.000000
+L2_RQSTS_MISS,64025.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000259
+Runtime unhalted [s],0.009764
+Clock [MHz],3004.176505
+CPI,3.114911
+L2 request rate,0.115986
+L2 miss rate,0.006825
+L2 miss ratio,0.058840
+
+
+=====================
+Region: BaseDeformationMapping applyJ else 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.000281
+call count,2029.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,8548328.000000
+CPU_CLK_UNHALTED_CORE,26635430.000000
+CPU_CLK_UNHALTED_REF,26522910.000000
+L2_TRANS_ALL_REQUESTS,1046811.000000
+L2_RQSTS_MISS,99873.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.000281
+Runtime unhalted [s],0.008900
+Clock [MHz],3005.485451
+CPI,3.115864
+L2 request rate,0.122458
+L2 miss rate,0.011683
+L2 miss ratio,0.095407
+
+
+=====================
+Region: BaseDeformationMapping applyJT vec 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.058322
+call count,4462.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,424675600.000000
+CPU_CLK_UNHALTED_CORE,233083200.000000
+CPU_CLK_UNHALTED_REF,232836900.000000
+L2_TRANS_ALL_REQUESTS,29330830.000000
+L2_RQSTS_MISS,4496361.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.058322
+Runtime unhalted [s],0.077882
+Clock [MHz],2995.954771
+CPI,0.548850
+L2 request rate,0.069066
+L2 miss rate,0.010588
+L2 miss ratio,0.153298
+
+
+=====================
+Region: BaseStrainMapping applyDJT 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.018034
+call count,2130.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,169991200.000000
+CPU_CLK_UNHALTED_CORE,81562260.000000
+CPU_CLK_UNHALTED_REF,81463980.000000
+L2_TRANS_ALL_REQUESTS,6193010.000000
+L2_RQSTS_MISS,1145608.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.018034
+Runtime unhalted [s],0.027253
+Clock [MHz],2996.399502
+CPI,0.479803
+L2 request rate,0.036431
+L2 miss rate,0.006739
+L2 miss ratio,0.184984
+
+
+=====================
+Region: BaseDeformationMapping apply 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],0.015463
+call count,522.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,91192030.000000
+CPU_CLK_UNHALTED_CORE,53520150.000000
+CPU_CLK_UNHALTED_REF,53506500.000000
+L2_TRANS_ALL_REQUESTS,4471096.000000
+L2_RQSTS_MISS,1510703.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],0.015463
+Runtime unhalted [s],0.017883
+Clock [MHz],2993.552421
+CPI,0.586895
+L2 request rate,0.049029
+L2 miss rate,0.016566
+L2 miss ratio,0.337882
+
+
+=====================
+Region: Simu 
+=====================
+
+Region Info,core 0
+RDTSC Runtime [s],1.437417
+call count,1.000000
+
+
+Event,core 0
+INSTR_RETIRED_ANY,2737548000.000000
+CPU_CLK_UNHALTED_CORE,2110778000.000000
+CPU_CLK_UNHALTED_REF,2110790000.000000
+L2_TRANS_ALL_REQUESTS,162606200.000000
+L2_RQSTS_MISS,38703510.000000
+
+
+Metric,core 0
+Runtime (RDTSC) [s],1.437417
+Runtime unhalted [s],0.705288
+Clock [MHz],2992.771919
+CPI,0.771047
+L2 request rate,0.059398
+L2 miss rate,0.014138
+L2 miss ratio,0.238020
+
