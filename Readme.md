@@ -1,6 +1,6 @@
 This repository contains the traces of the experiment on Sofa presented in my Ph.D thesis, and the scenes used for the experiment.
 
-The experiment where run on an old customized version of Sofa, available [here](TODO).
+The experiment where run on an old customized version of Sofa, available [here](https://github.com/dbeniamine/Sofa_old).
 
 File hierarchy:
 
